@@ -1,0 +1,105 @@
+\documentclass[bachelor]{njupthesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%杂七杂八的补充宏包
+\usepackage{xpinyin}
+\xpinyinsetup{ratio = .4,font =\ubufont,multiple={\color{black}}}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{xcolor}
+% \usepackage{eso-pic}
+% \usepackage{mathrsfs}
+% \usepackage{setspace}
+% \usepackage{array}
+% \usepackage{graphicx}   % standard LaTeX graphics tool
+%                         % when including figure files
+% \usepackage{latexsym}
+% \usepackage{zxjatype}
+% \usepackage{xeCJK}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%证毕符号的添加（黑色方块）
+\renewcommand{\qed}{\hfill $\blacksquare$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{xxxxxxxx}
+\author{xxx}
+\advisor{xxx}
+\school{xxx}
+\major{xxxxx}
+\studentclass{xxx}
+\studentid{xxx}
+\graduateyear{2023}
+\begindate{2023年3月11日}
+\finishdate{2023年6月14日}
+
+\begin{document}
+
+\input{macros.tex}%公式缩写新定义命令
+
+\makecover
+
+\begin{chineseabstract}
+这是论文摘要。 
+
+需要的话可以用多个段落。
+
+……
+
+\chinesekeyword{}
+\end{chineseabstract}
+
+\begin{englishabstract}
+With the going on of English abstract......
+
+......
+
+\englishkeyword{}
+\end{englishabstract}
+
+\thesistableofcontents%生成目录
+
+\thesischapterexordium
+
+
+%%%%%%%%%%%%% 正文 %%%%%%%%%%%%%%%%%%
+\input{Mainbody/Introduction}%第一章：绪论
+\input{Mainbody/Conclusion}%第六章：全文总结与展望
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 致谢 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thesisacknowledgement
+
+谢谢谢谢谢谢
+
+\vspace{\baselineskip}
+\begin{flushright}\noindent
+Nanjing, China \hfill {\it 秦辰彬 Chin Chenpin}\\
+\hfill {\it 2023.6}
+\end{flushright}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thesisloadbibliography[nocite]{reference}
+
+%
+% Uncomment following codes to load bibliography database with native
+% \bibliography command.
+%
+% \nocite{*}
+% \bibliographystyle{njupthesis}
+% \bibliography{reference}
+%
+
+\thesisappendix
+本论文的写作\LaTeX 模板与答辩演示的幻灯片\LaTeX 模板已上传本人的GitHub仓库，详情请见\underline{\url{https://github.com/CoryChin/NJUPT-Bachelor-Thesis}}. 
+
+排版本论文的\LaTeX 模板以Overleaf-Template中的NJPUPTthesis模板为原型，由本人按照南京邮电大学2023年发布的最新本科生毕业论文的Word文件格式要求进行修改所得。答辩演示的幻灯片\LaTeX 模板修改自清华大学学术幻灯片模板，特此感谢南京邮电大学2018级理学院张欣宇学长为此模板的修改所做的主要工作。
+
+修改后的文档写作\TeX 模板版权系南京邮电大学理学院秦辰彬所有，但因项目地址已开源，故任何有需要学生可随意使用，如有使用请自觉在论文中声明出处并致谢。
+
+\end{document}
